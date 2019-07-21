@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/burgerScript.js"> </script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+	<script>
+		$(document).ready(function () {
+			updateClick();
+			});
+	</script>
+</head>
+
+<body>
+<div class="container">
+
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    
+    <br>
+	  <h1> <span style="color:orange; font-family:cursive"><em> <i> BURGRER QUINN </i> </em> </span> </h1>
+	      <ul class="nav nav-pills nav-stacked">
+	        <li class="active"><a href=""> Order Page</a></li>
+	        <li><a href="http://localhost:8080/orders/view">Cart</a></li>
+	        <li><a href="#section3">About Us</a></li>
+	      </ul><br>
+	      
+	      <div class="input-group">
+	        <input type="text" class="form-control" placeholder="Search Burger..">
+	        <span class="input-group-btn">
+	          <button class="btn btn-default" type="button">
+	           <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+	      
+	</div>
+		<form>
+			<div class="col-sm-9 p-3 mb-2 bg-warning text-white">
+				<h1> <u> Order Your Burger</u> </h1>
+				<br>
+				<div>
+					<label for="id">Order Id:</label>
+					<input type="text" id="id" value="0">
+				</div> <br>
+				
+				<div>
+					<label for="cname">Customer Name :</label>
+					<input type="text" id="cname" value="Enter Your Name">
+				</div> <br> 
+				
+				<div>
+					<label for="name">Burger Name :</label> 
+					<select id="iname" onchange="pickburger()">
+						<option>Select Burger</option>
+						<option>Chicken Burger</option>
+						<option>Chicken Cheese Burger</option>
+						<option>Charlie Burger</option>
+						<option>Crispy Chicken Burger</option>
+					</select> 
+				</div> <br>
+				
+				<div>
+					<label for="price">Price :</label> 
+					<input type="text" id="price" value="0"> 
+				</div> <br>
+				
+				<div>
+					<!-- Increment Button -->
+					<label for="qty">Quantity :</label> 
+					<input type="number" id="qty" value="0" onclick="calTotal()" />
+				</div> <br>
+				
+				<div>
+					<label for="tot">Total Amount : </label>
+					<input type="text" id="total" value="0">
+				</div> <br>
+				
+				<div>
+					<label for="Ptype">Payment Type : </label>
+					<select id="pType" onchange="">
+						<option>Select Payment Type</option>
+						<option>Cash</option>
+						<option>Credit Card</option>
+						<option>Debit Card</option>
+						<option>Frimi</option>
+					</select> 
+				</div> <br>
+				
+				<div>
+					<button type="reset" class="btn btn-primary" id="resetButton" value="Reset">Reset</button> &nbsp &nbsp &nbsp &nbsp					
+					<button type="submit" class="btn btn-primary" id="saveButton" value="Submit" onclick="updateClick()">Submit</button> 
+				
+				</div>	<br> <br> <br> <br> <br> 
+		</div>
+	</form>
+	</div>
+	</div>
+</body>
+</html>

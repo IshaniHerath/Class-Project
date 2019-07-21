@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<script type="text/javascript" th:src="@{/js/call.js}"></script>
+	<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
+	<script>
+		$(document).ready(function () {
+			productList();
+			});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+	
+		<div class="row content">
+	    <div class="col-sm-2 sidenav">
+	    <br>
+			<h1> <span style="color:orange; font-family:cursive"><em> <i> BURGRER QUINN </i> </em> </span> </h1>
+			<ul class="nav nav-pills nav-stacked">
+		        <li><a href="http://localhost:8080/">Order Page</a></li>
+		        <li class="active"><a href="http://localhost:8080/orders/view">Cart</a></li>
+		        <li><a href="#section3">About Us</a></li>
+			</ul><br>
+		      
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search Burger..">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</span>
+	      	</div>
+	
+	</div>
+			<div class="col-sm-9 p-3 mb-2 bg-warning text-white">
+			
+				<h1>
+					<u>Your Order</u>
+				</h1> <br>
+
+				<table class="table" style="width:800px" id = "productTable" border="2" >
+					<thead class= "black white-text">
+					<tr>
+	                    <th>Order Number</th>
+	                    <th>Order Item Name</th>
+	                    <th>Price</th>
+	                    <th>Quantity</th>
+	                    <th>Total</th>
+	                </tr>
+	                </thead>
+				</table>
+				<br> <br> <br> <br>
+				 
+			</div>
+		</div>
+	</div>
+</body>
+</html>
